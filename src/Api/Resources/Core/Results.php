@@ -43,7 +43,7 @@ class Results extends ResourceAbstract
         parent::setUpRoutes();
 
         $this->setRoutes([
-            'getAll' => 'forms/{form_id}/results',
+            'get' => 'forms/{form_id}/results',
         ]);
     }
 }

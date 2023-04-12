@@ -1,0 +1,38 @@
+{
+    "name": "kylewlawrence/gravity-forms-api-client-php",
+    "type": "library",
+    "description": "GForms API PHP SDK",
+    "minimum-stability": "beta",
+    "keywords": [
+        "gravity-forms",
+        "php-sdk"
+    ],
+    "homepage": "http://designanddevelop.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "KyleWLawrence",
+            "email": "Kyle@DesignAndDevelop.io"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "guzzlehttp/psr7": "^2.0",
+        "php": ">=8.1",
+        "doctrine/inflector": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "2.*",
+        "phpmd/phpmd": "@stable",
+        "fzaninotto/faker": ">=1.5.0",
+        "psy/psysh": "^0.11",
+        "bshaffer/phpunit-retry-annotations": "^0.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "KyleWLawrence\\GForms\\Api\\": "src/Api",
+            "KyleWLawrence\\GForms\\Console\\": "src/Console"
+        }
+    }
+}

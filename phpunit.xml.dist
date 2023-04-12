@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit bootstrap="tests/bootstrap.php" colors="true" backupGlobals="false" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true">
+    <php>
+        <env name="TOKEN" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzNDgiLCJqdGkiOiJhZTZiMjcwMDQzYzI0NjRmMjA1M2E2MTFjZWJlNzg5YzMxZTNiMjE3OGIwYmQ0NWU5YzVlODQ0MzNkOWEzZDM1MzZlZThkNTJmMDE2Y2ExYSIsImlhdCI6MTY3MDA4MjMxMywibmJmIjoxNjcwMDgyMzEzLCJleHAiOjE3MDE2MTgzMTMsInN1YiI6IjI4OTMiLCJzY29wZXMiOltdfQ.nQ2Ne3xYePUb7BpdFi7GpazjoMNPNh2EkCbl6h4mi57zuBS3VfG67dkJ7u7RSrZ62dCZjgMCs9blItMQKMQfXS_uf8G24ngJwxdzkZdf7cCoRg1Qgwv5vORBug753rtga0Iq5_PSvECVh2xzeanm3Ky_WXMJWpOn_j9smFJHEpfg7vO1uNIG7T6pOemDvUIqpeq650W04mU_aiuPwTh2RWQk6RVL8Ci8sF_CqsATr0Uxa38lTVmdWkw9vxX5brJzRNBAJnLCfikuyCoJLO5EcMtmCAOY3i698XPEtpnwRfwxiGk-i_EMNfcU4J7_IvNXa_Lq73Z3B9DYWJmvfucJ3VahAtk8sfrfcDWt3TkSuVkcBxkEGgGEPViTW58VNgyro398qzet9f0y6nSr7Ifvk6TnKPPWeplp-QF-dFl6gKIMuKun6NuMLBNZSt6SlSZJffzLe8EoQFLpEGj6HRSPv7ZHqlwH09JN7ZBSte2m3PEicKO85901uj-4gVHBz0WAJPcHZoeLUYQ3VtAFdZNUAJnc2HyyybqoA4HS_3r5mOOzRdJeMFLk-4wMu34p7WPdBhLuxHfiR4HVTPDvumXtFr2ovtLj-Udqcc8DGnaiS3jhCqWYgylv7C74_tnfw5IyLsHkyfFyU26xJopTTqnF2sp6TXK8IAJ6l_qzWIIYae4"/>
+        <env name="AUTH_STRATEGY" value="bearer"/>
+        <env name="PROVIDER" value="aws-lightsail"/>
+        <env name="AWS_ACCESS_KEY_ID" value="AKIAIOUDWS64NEOWRR7A"/>
+        <env name="DOMAIN" value="livetest.kylewlawrence.com"/>
+    </php>
+
+    <testsuites>
+        <testsuite name="Zendesk API Unit Test Suites">
+            <directory>./tests/Zendesk/API/UnitTests</directory>
+        </testsuite>
+        <testsuite name="Zendesk API Live Test Suites">
+            <directory>./tests/Zendesk/API/LiveTests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

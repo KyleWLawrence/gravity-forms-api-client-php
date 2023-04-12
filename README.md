@@ -34,6 +34,7 @@ use KyleWLawrence\GForms\Api\HttpClient as GFormsAPI;
 
 $username     = "6wiIBWbGkBMo1mRDMuVwkw1EPsNkeUj95PIz2akv"; // replace this with your Gravity Forms api username
 $password     = "fdsJfds43dMo1mRDMuVwkw1EPsNkeUj9fdjk376l"; // replace this with your Gravity Forms api password
+$domain       = "example.com"; // replace this with the domain (and path) of your Gravity Forms installation
 
 $client = new GFormsAPI();
 $client->setAuth('basic', ['username' => $username, 'password' => $password]);

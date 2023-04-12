@@ -1,8 +1,8 @@
 <?php
 
-namespace KyleWLawrence\GridPane\Console;
+namespace KyleWLawrence\GForms\Console;
 
-use KyleWLawrence\GridPane\Console\Matchers\SubResourceMatcher;
+use KyleWLawrence\GForms\Console\Matchers\SubResourceMatcher;
 use Psy\TabCompletion\Matcher\ObjectAttributesMatcher;
 use Psy\TabCompletion\Matcher\ObjectMethodsMatcher;
 

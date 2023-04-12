@@ -1,6 +1,6 @@
 <?php
 
-namespace KyleWLawrence\GridPane\Console\Matchers;
+namespace KyleWLawrence\GForms\Console\Matchers;
 
 use InvalidArgumentException;
 use Psy\TabCompletion\Matcher\AbstractContextAwareMatcher;

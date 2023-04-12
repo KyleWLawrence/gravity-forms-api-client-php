@@ -1,9 +1,9 @@
 <?php
 
-namespace KyleWLawrence\GridPane\Console;
+namespace KyleWLawrence\GForms\Console;
 
-use KyleWLawrence\GridPane\Api\Exceptions\ApiResponseException;
-use KyleWLawrence\GridPane\Api\HttpClient;
+use KyleWLawrence\GForms\Api\Exceptions\ApiResponseException;
+use KyleWLawrence\GForms\Api\HttpClient;
 use Psy\Configuration;
 use RuntimeException;
 use Symfony\Component\Console\Command\Command;
@@ -23,7 +23,8 @@ class ConsoleCommand extends Command
         $this
             ->setName('console')
             ->setDescription('Test out features of the php api client.')
-            ->addArgument('bearer', InputArgument::REQUIRED);
+            ->addArgument('password', InputArgument::REQUIRED)
+            ->addArgument('username', InputArgument::REQUIRED);
     }
 
     /**
@@ -40,14 +41,12 @@ class ConsoleCommand extends Command
         $config = new Configuration;
 
         $client = new HttpClient();
-        $client->setAuth('bearer', ['bearer' => $input->getArgument('bearer')]);
+        $client->setAuth('basic', ['username' => $input->getArgument('username'), 'password' => $input->getArgument('password')]);
 
         try {
-            $data = $client->user()->getCurrent();
+            $data = $client->forms()->getAll();
             $config->setStartupMessage(
-                '<fg=green>Hi '.
-                $data->name.
-                '. An instance of HttpClient using your credentials is stored on $client variable.</>'
+                '<fg=green>Hi. An instance of HttpClient using your credentials is stored on $client variable.</>'
             );
         } catch (ApiResponseException $e) {
             $config->setStartupMessage('<fg=red>Invalid client credentials</>');

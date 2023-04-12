@@ -74,8 +74,8 @@ class HttpClient
      * @param  \GuzzleHttp\Client  $guzzle
      */
     public function __construct(
+        $hostname,
         $scheme = 'https',
-        $hostname = 'my.gridpane.com',
         $guzzle = null
     ) {
         if (is_null($guzzle)) {

@@ -9,11 +9,11 @@ use KyleWLawrence\GForms\Api\Traits\Resource\Defaults;
 use KyleWLawrence\GForms\Api\Traits\Utility\InstantiatorTrait;
 
 /**
- * The Site class exposes key methods for reading, updating and deleting a site
+ * The Validation class exposes key methods for reading, updating and deleting a validation
  *
- * @method Site site()
+ * @method Validation validation()
  */
-class Site extends ResourceAbstract
+class Validation extends ResourceAbstract
 {
     use InstantiatorTrait;
     use Defaults {
@@ -22,7 +22,7 @@ class Site extends ResourceAbstract
     }
 
     /**
-     *  Mandatory create site keys
+     *  Mandatory create validation keys
      */
     public static $form_params = [
         'fields',
